@@ -1,0 +1,923 @@
+{
+	"info": {
+		"_postman_id": "ab27801f-9d3d-481c-b500-d8d2e269e9d3",
+		"name": "8seneca_AnPV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "205431"
+	},
+	"item": [
+		{
+			"name": "LOCAL - users/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": "user20",
+							"type": "text"
+						},
+						{
+							"key": "fullName",
+							"value": "f_20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - users/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - users (all)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - users/:id (update)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullName",
+							"value": "f4-2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - users/:id (delete)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - users/search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "tasksStatus",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "tasksDetailName",
+							"value": "bug",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks-detail/feature/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "feature11",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "GUI screen11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "featureBusinessValue",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "featureDeadline",
+							"value": "2025-05-12 00:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks-detail/feature/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks-detail",
+						"feature",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks-detail/bug/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bug6",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "GUI error",
+							"type": "text"
+						},
+						{
+							"key": "bugSeverity",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "bugStepsToReproduce",
+							"value": "1. test 2.refresh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks-detail/bug/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks-detail",
+						"bug",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks-detail/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks-detail/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks-detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks-detail (all)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks-detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks-detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks-detail/:id (delete)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks-detail/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks-detail",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks-detail/:id (update bug)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bug 1",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "function1 error",
+							"type": "text"
+						},
+						{
+							"key": "bugSeverity",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bugStepsToReproduce",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks-detail/bug/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks-detail",
+						"bug",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks-detail/:id (update feature)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "feature 9",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "function1 upgrade",
+							"type": "text"
+						},
+						{
+							"key": "featureBusinessValue",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "featureDeadline",
+							"value": "2025-05-12 00:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks-detail/feature/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks-detail",
+						"feature",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks/assign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "tasksDetailId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "need investigate more to scope affected area",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks/:id (update)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "13/05 must finish",
+							"type": "text"
+						},
+						{
+							"key": "usersId",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "tasksDetailId",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks (all)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - tasks/:id (delete)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountA\": 1,\r\n    \"accountB\": 2,\r\n    \"amount\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - transfer 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountA\": 1,\r\n    \"accountB\": 2,\r\n    \"amount\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - create account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - createU",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/createU",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"createU"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - createD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/createD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"createD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - createT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/createT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"createT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - listing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/listing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"listing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL - test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"pham van an\",\r\n    \"age\": \"12\",\r\n    \"amount\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL -count-matrix",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SysId",
+						"value": "Lambda",
+						"type": "default"
+					},
+					{
+						"key": "AccessKey",
+						"value": "7235753878214125442A472D4B615064",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountA\": 1,\r\n    \"accountB\": 2,\r\n    \"amount\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hsm/count-matrix",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hsm",
+						"count-matrix"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
