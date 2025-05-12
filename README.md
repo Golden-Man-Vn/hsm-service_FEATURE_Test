@@ -1,20 +1,12 @@
 1. How to build
    * Prerequirement:
-	   - IDE usage: IntelliJ IDEA 2021.1.3
-	   - Java for project: Java 17
+	   - IDE usage: IntelliJ IDEA 2021.1.3 or higher
+	   - Java for project: Java 17 or higher
 		 Java language level Java 16 (compiled class)
-	   - Maven: Bundled Maven 3.6.3  
+	   - Maven: Bundled Maven 3.6.3 or higher  
 	   - Internet connected so it can connect to online DB such as supabase or neondb Postgres DB provider (already integrated in this project source)
-   * Build:
-		1. Extract source in Source directory:
-			(1) Extract source zip file (hsm-service_FEATURE_Test.zip) by using password is: AnPV
-				Then hsm-service_FEATURE_Test.txt showed				
-			(2) Then:
-				Then delete hsm-service_FEATURE_Test.zip
-				Change file name hsm-service_FEATURE_Test.txt => hsm-service_FEATURE_Test.zip
-			(3) Extract hsm-service_FEATURE_Test.zip no need password any more
-				Now source in directory: hsm-service_FEATURE_Test 
-		2. Open project by IntelliJ by refer to hsm-service_FEATURE_Test directory => wait for load complete => use Maven to package or build
+   * Build:		
+		1. Open project by IntelliJ by refer to hsm-service_FEATURE_Test directory => wait for load complete => use Maven to package or build
 
 2. How to run
 	Prerequirement after build this project successfully!
@@ -23,12 +15,12 @@
 		- Install Java 17 or higher: such as Amazon Corretto jdk17.0.15_6	
           To be sure Java is configured in system path (so can use RUN\start.bat directly below)
 		  If not, please place java to specific directory in RUN\start.bat (by editing line: java -jar hsm-service-1.0.jar)
-		- About Source\hsm-service_FEATURE_Test\RUN\start.bat file
+		- About hsm-service_FEATURE_Test\RUN\start.bat file
 		  It is a script to copy application file from build directory (target\hsm-service-1.0.jar)
 		  And configure some evironment variables (DB, Flyway, .. => so if want to change another DB, please correct these variables)
 		  Then run application automattically by double click on this file
 		- Run:
-			Double click (or run in command line) on Source\hsm-service_FEATURE_Test\RUN\start.bat
+			Double click (or run in command line) on hsm-service_FEATURE_Test\RUN\start.bat
 			
 	* Linux familiar:
 		- Install Java 17 or higher
@@ -42,7 +34,7 @@
      Refer to 8seneca_Task assignment_ANSWER.xlsx file or online file (https://docs.google.com/spreadsheets/d/1qghY4qz9eqOIuHN_iU7i4cyM5-w40dJANRmGZhH0XjU/edit?gid=0#gid=0)
 	 to understand each API function (input and output)
    - Run JUnit test from build IDE by refer to: 
-	 Source\hsm-service_FEATURE_Test\src\main\java\com\company\project\test
+	 hsm-service_FEATURE_Test\src\main\java\com\company\project\test
 	 Scanario for JUnit test as following:
 		(1) Run testcase in UsersServiceTest: to create users
 		(2) Run testcase in TaskDetailServiceTest: to create tasks detail
