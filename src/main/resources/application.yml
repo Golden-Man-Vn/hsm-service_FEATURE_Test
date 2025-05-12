@@ -1,0 +1,78 @@
+logging:
+  level:
+    org.flywaydb: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+spring:
+  flyway:
+    enabled: false                    # On/Off Flyway
+    locations: classpath:db/migration # place store .sql
+    baseline-on-migrate: true         # make baseline if DB not have history
+    clean-disabled: true              # Not permit clean DB
+    validate-on-migrate: true         # check checksum file SQL and history
+    out-of-order: false               # Not permit run migration older version
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    ### Supabase provider
+    url: jdbc:postgresql://aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?preparedStatementCacheQueries=0&prepareThreshold=0
+    username: postgres.uialljhfsnwxffnilhcq
+    password: hytTgfr@$6f@DS
+    ### Neon provider
+    #url: jdbc:postgresql://ep-jolly-waterfall-a4nys379-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require
+    #username: neondb_owner
+    #password: npg_r9BLuQZK5qhX
+    hikari:
+      maximum-pool-size: 10
+      pool-name: HikariCP
+      auto-commit: false
+      initialization-fail-timeout: 0
+      data-source-properties:
+        cachePrepStmts: false
+        useServerPrepStmts: false
+  jpa:
+#    database-platform: org.hibernate.dialect.ProgressDialect
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        #format_sql: true
+        #dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+  sleuth:
+    sampler:
+      probability: 100
+  main:
+    banner-mode: off
+    allow-circular-references: true
+    log-startup-info: false
+  cloud:
+    discovery:
+      enabled: false
+    compatibility-verifier:
+      enabled: false
+  application:
+    name: hsm-service
+  # Jackson
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write_dates_as_timestamps: false
+      fail-on-empty-beans: false
+    #time-zone: Asia/Ho_Chi_Minh
+    time-zone: UTC
+  pid:
+    file: C:/application.pid
+server:
+  error:
+    whitelabel:
+      enabled: false
+  shutdown: graceful
+  port: 8080
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
