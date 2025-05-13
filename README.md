@@ -36,9 +36,9 @@
    - Run JUnit test from build IDE by refer to: 
 	 hsm-service_FEATURE_Test\src\main\java\com\company\project\test
 	 Scanario for JUnit test as following:
-		(1) Run testcase in UsersServiceTest: to create users
-		(2) Run testcase in TaskDetailServiceTest: to create tasks detail
-		(3) Run testcase in TasksServiceTest: to assign tasks detail to user automatically
+		- (1) Run testcase in UsersServiceTest: to create users
+		- (2) Run testcase in TaskDetailServiceTest: to create tasks detail
+		- (3) Run testcase in TasksServiceTest: to assign tasks detail to user automatically
 		    It first try to find any free user (no task detail assigned) and not yet assigned task detail
 			If not found, either user or task detail, it randomly select any user or task detail to assign.
 
@@ -51,8 +51,8 @@
    Suppose it is a small DB (for demo), so tables contain maximum number of records is 2,147,483,647 (ID field type is int4)
    And DB relationship between entities (foreign key usage) is keep to easily navigate to extract information.
    Based on requirement DB model firtly clarify by:
-	   users - tasks (relationship: 1 - n)
-	   tasks - tasks_detail (relationship: 1 - n)   
+		- users - tasks (relationship: 1 - n)
+		- tasks_detail - tasks (relationship: 1 - n)   
    These relationship is relected in source code by using JPA hibernate annotation (once again suppose it is a small DB for demo!).
    
    APIs are designed to simple check valid input and perform requirement function 
